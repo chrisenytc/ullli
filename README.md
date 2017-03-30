@@ -10,6 +10,11 @@
 
 > A simple and awesome url shortener
 
+## Dependencies
+
+- Docker for Mac
+- Ruby 2.3.1
+
 ## Getting Started
 
 1º Clone ullli repo
