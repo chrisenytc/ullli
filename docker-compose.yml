@@ -1,0 +1,17 @@
+version: '2'
+services:
+  server:
+    build: .
+    command: script/start
+    ports:
+      - 5000:5000
+    volumes:
+        - .:/go/src/github.com/chrisenytc/ullli
+    links:
+      - redis
+    env_file:
+      - development.env
+  redis:
+    image: "redis:3.0.7"
+    ports:
+      - 6379:6379
