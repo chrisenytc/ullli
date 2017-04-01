@@ -1,6 +1,7 @@
 package endpoints
 
 import (
+	"net/url"
 	"time"
 
 	log "github.com/Sirupsen/logrus"
@@ -22,8 +23,8 @@ type UrlItem struct {
 }
 
 func PostShorten(ctx *iris.Context) {
-	url := Url{}
-	err := ctx.ReadForm(&url)
+	urlData := Url{}
+	err := ctx.ReadForm(&urlData)
 
 	if err != nil {
 		log.Errorf("An error has occurred on ReadForm: %s", err)
@@ -31,9 +32,17 @@ func PostShorten(ctx *iris.Context) {
 		return
 	}
 
-	if url.Url == "" {
+	if urlData.Url == "" {
 		ctx.SetStatusCode(iris.StatusBadRequest)
 		ctx.MustRender("error.html", struct{ Message string }{Message: "You need to a enter a URL."})
+		return
+	}
+
+	_, err = url.ParseRequestURI(urlData.Url)
+
+	if err != nil {
+		ctx.SetStatusCode(iris.StatusBadRequest)
+		ctx.MustRender("error.html", struct{ Message string }{Message: "Invalid URL."})
 		return
 	}
 
@@ -55,7 +64,7 @@ func PostShorten(ctx *iris.Context) {
 		shortCode = uid.NewUId()
 	}
 
-	_, save_err := adapters.SaveUrl(shortCode, url.Url)
+	_, save_err := adapters.SaveUrl(shortCode, urlData.Url)
 
 	if save_err != nil {
 		log.Errorf("An error has occurred on SaveUrl: %s", save_err)
