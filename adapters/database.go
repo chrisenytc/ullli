@@ -25,6 +25,10 @@ func LoadDatabase() {
 	log.Info("The application is now using the database connection.")
 }
 
+func GetConnection() redis.Conn {
+	return connection
+}
+
 func GetUrl(key string) (string, error) {
 	return redis.String(connection.Do("HGET", key, "url"))
 }
