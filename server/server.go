@@ -18,6 +18,4 @@ func main() {
 
 	// Load proxy server
 	router.Load()
-
-	defer adapters.GetConnection().Close()
 }
