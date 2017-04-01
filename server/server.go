@@ -13,6 +13,11 @@ func main() {
 	// Load database
 	adapters.LoadDatabase()
 
+	// Load metrics agent
+	adapters.LoadMetricsAgent()
+
 	// Load proxy server
 	router.Load()
+
+	defer adapters.GetConnection().Close()
 }
