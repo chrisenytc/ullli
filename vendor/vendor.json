@@ -294,6 +294,42 @@
 			"revisionTime": "2017-03-28T05:04:31Z"
 		},
 		{
+			"checksumSHA1": "I4gXIYxq/EXHz7iNtvApZmfi/xY=",
+			"path": "github.com/newrelic/go-agent",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
+			"checksumSHA1": "xOBMYhyCFUIXslS7AWykIUY6dUk=",
+			"path": "github.com/newrelic/go-agent/internal",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
+			"checksumSHA1": "mkbupMdy+cF7xyo8xW0A6Bq15k4=",
+			"path": "github.com/newrelic/go-agent/internal/jsonx",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
+			"checksumSHA1": "ywxlVKtGArJ2vDfH1rAqEFwSGds=",
+			"path": "github.com/newrelic/go-agent/internal/logger",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
+			"checksumSHA1": "S7CiHO7EblgZt9q7wgiXMv/j/ao=",
+			"path": "github.com/newrelic/go-agent/internal/sysinfo",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
+			"checksumSHA1": "c2JSKesj3tHYgzIF3QL37WfHWG8=",
+			"path": "github.com/newrelic/go-agent/internal/utilization",
+			"revision": "60ed7aa03a85a1355b4189f66e23604de8f27d57",
+			"revisionTime": "2017-03-16T23:47:42Z"
+		},
+		{
 			"checksumSHA1": "41hlerAYPe6EFKtgmK/AEf5xBP4=",
 			"origin": "gopkg.in/kataras/iris.v6/vendor/github.com/russross/blackfriday",
 			"path": "github.com/russross/blackfriday",
