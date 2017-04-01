@@ -135,7 +135,7 @@ func GetShortCodeStats(ctx *iris.Context) {
 
 	createdAt, err := time.Parse(time.RFC3339, url[5])
 
-	if err == nil {
+	if err != nil {
 		log.Errorf("An error has occurred on Time.Parse: %s", err)
 		ctx.EmitError(iris.StatusInternalServerError)
 		return
