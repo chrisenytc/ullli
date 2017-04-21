@@ -6,13 +6,13 @@ import (
 )
 
 type Settings struct {
-	Port        string `env:"PORT",required`
-	Environment string `env:"GO_ENV",required`
-	LogType     string `env:"LOG_TYPE",required`
-	LogLevel    string `env:"LOG_LEVEL",required`
-	HostUrl     string `env:"HOST_URL",required`
-	RedisUrl    string `env:"REDIS_URL",required`
-	NewRelicKey string `env:"NEW_RELIC_LICENSE_KEY",required`
+	Port        string `env:"PORT,required"`
+	Environment string `env:"GO_ENV,required"`
+	LogType     string `env:"LOG_TYPE,required"`
+	LogLevel    string `env:"LOG_LEVEL,required"`
+	HostUrl     string `env:"HOST_URL,required"`
+	RedisUrl    string `env:"REDIS_URL,required"`
+	NewRelicKey string `env:"NEW_RELIC_LICENSE_KEY,required"`
 }
 
 var config Settings
